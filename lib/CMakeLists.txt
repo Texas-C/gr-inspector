@@ -39,7 +39,10 @@ if(NOT inspector_sources)
 endif(NOT inspector_sources)
 
 add_library(gnuradio-inspector SHARED ${inspector_sources})
-target_link_libraries(gnuradio-inspector gnuradio::gnuradio-runtime)
+
+target_link_libraries(gnuradio-inspector PUBLIC gnuradio::gnuradio-runtime
+	Qt5::Widgets)
+
 target_include_directories(gnuradio-inspector
     PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
     PUBLIC $<INSTALL_INTERFACE:include>

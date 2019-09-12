@@ -125,7 +125,10 @@ endif(APPLE)
 # Find gnuradio build dependencies
 ########################################################################
 find_package(Doxygen)
-find_package( Qt5 COMPONENTS Widgets REQUIRED)
+
+#set(CMAKE_AUTOMOC ON)
+#set(CMAKE_INCLUDE_CURRENT_DIR ON)
+find_package(Qt5 COMPONENTS Core Widgets REQUIRED)
 
 ########################################################################
 # Setup doxygen option
