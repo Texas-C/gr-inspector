@@ -42,7 +42,7 @@ namespace gr {
                            const std::vector<int> &beta);
       ~ofdm_bouzegzi_c_impl();
 
-      oid rescale_fft(bool forward);
+      void rescale_fft(bool forward);
       void do_fft(const gr_complex *in, gr_complex *out);
 
       float autocorr(const gr_complex *sig, int a, int b, int p);
